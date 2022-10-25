@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Puistoon.com</title>
+
+	<script type="text/javascript" nonce="bd8ecd52578348da9cd8021e83e" src="//local.adguard.org?ts=1628795565314&amp;type=content-script&amp;dmn=webdisk.metropolia.fi&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;uag="></script>
+<script type="text/javascript" nonce="bd8ecd52578348da9cd8021e83e" src="//local.adguard.org?ts=1628795565314&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;name=Web%20of%20Trust&amp;type=user-script"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="css/lightbox.css" rel="stylesheet" />
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+	<script src="https://unpkg.com/osmtogeojson@2.2.12/osmtogeojson.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+</head>
+
+<body>
+	<div id="cool-bg-color"></div>
+	<div id="page-container">
+		<header>
+			<h1>Puistoon.com</h1>
+			<div id="weather-container">
+				<h2>Päivän sää</h2>
+				<div id="weather">
+
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section id="map-section">
+				<form>
+					<input type="text" name="search-text" id="search-text" placeholder="Kirjoita sijaintisi..."
+						autocomplete="off" />
+					<button id="search-button">Hae</button>
+				</form>
+				<h4>Tai klikkaa kartalta!</h4>
+				<div id="map-container">
+					<div id="map"></div>
+					<div id="loading-overlay"></div>
+				</div>
+			</section>
+
+			<section id="parks-section">
+				<h2>Valitse puistosi:</h2>
+				<ul id="closest-parks"></ul>
+			</section>
+
+			<section id="shop-section">
+				<div id="shop-info">
+					<h2>Kaupat matkan varrella:</h2>
+					<ul id="shop-list"></ul>
+				</div>
+			</section>
+		</main>
+
+		<aside>
+			<section id="introduction-section">
+				<h2>Mikä ihmeen Puistoon.com?</h2>
+				<video controls>
+					<source src="videos/projektivideo_versio3_1.mp4" type="video/mp4">
+				</video>
+				<p><a href="https://www.youtube.com/watch?v=dSTq_V8S0Wk" target="_blank">Video löytyy myös
+						YouTubesta</a>
+				<p><strong>Puistoon.com</strong> on sivusto juuri sinulle, joka tahdot nauttia kesäisistä piknik- ja
+					pussi&shy;kalja&shy;hetkistä
+					helposti tilanteessa kuin tilanteessa. Syötä vain sijaintisi haku&shy;palkkiin tai klikkaa karttaa:
+					me
+					kerromme, missä sinua lähimmät puistot sijaitsevat.</p>
+				<p>Kylkiäisenä näet sään ja lähimmät kaupat aukiolo&shy;aikoineen: voit poimia piknikillä tarvittavat
+					virvoikkeet ja eväät mukaan kätevästi matkallasi puistoon. Lisäksi tarjoamme helppoja ja maistuvia
+					reseptejä. Ota siis kaveri mukaan ja klikkaa itsesi piknikille!</p>
+			</section>
+
+			<section id="recipe-section">
+				<h2>Päivän resepti</h2>
+			</section>
+		</aside>
+
+		<footer>
+			<section id="footer-section">
+				<h2>Tämän projektin takana:</h2>
+				<ul>
+					<li>
+						<figure>
+							<a href="images/mugshot_hanna.jpg" data-lightbox="image-hlo1" data-title="Hanna Heimonen">
+								<img src="images/mugshot_hanna.jpg" alt="Hanna Heimonen" /></a>
+							<figcaption>
+								<h3>Hanna Heimonen</h3>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<a href="images/mugshot_kasperi.jpg" data-lightbox="image-hlo2"
+								data-title="Kasperi Kiviluoma">
+								<img src="images/mugshot_kasperi.jpg" alt="Kasperi Kiviluoma" /></a>
+							<figcaption>
+								<h3>Kasperi Kiviluoma</h3>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<a href="images/mugshot_saku.jpg" data-lightbox="image-hlo3" data-title="Saku Myyryläinen">
+								<img src="images/mugshot_saku.jpg" alt="Saku Myyryläinen" /></a>
+							<figcaption>
+								<h3>Saku Myyryläinen</h3>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<p>
+					<a href="other/Videon_taustatyö_ja_kuvakäsikirjoitus.pdf" target="_blank">Videon taustatyö ja
+						kuvakäsikirjoitus (.pdf)</a> &mdash;
+					<a href="audio/videon_ääniraita.mp3" target="_blank">Videon
+						ääniraita ilman musiikkia</a>
+				</p>
+			</section>
+		</footer>
+
+		<script src="js/map.js"></script>
+		<script src="js/loadingOverlay.js"></script>
+		<script src="js/route.js"></script>
+		<script src="js/parks.js"></script>
+		<script src="js/shops.js"></script>
+		<script src="js/overpass.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/userLocation.js"></script>
+		<script src="js/recipes.js"></script>
+		<script src="js/lightbox-plus-jquery.js"></script>
+	</div>
+</body>
+
+</html>

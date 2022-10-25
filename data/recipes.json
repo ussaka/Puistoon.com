@@ -1,0 +1,83 @@
+{
+    "recipes": [
+        {
+            "name": "Vohvelit",
+            "imgPath": "vohvelit.jpg",
+            "imgAlt": "Kuva vohveleista lautasella, joiden päällä hilloa ja jäätelöä.",
+            "recipeParts": [
+                {
+                    "title": "Vohvelitaikina:",
+                    "ingredients": [
+                        "40 g voita",
+                        "2 kananmunaa",
+                        "2 dl maitoa",
+                        "2 dl vehnäjauhoja",
+                        "¼ dl sokeria",
+                        "1 tl vaniljasokeria",
+                        "1 tl leivinjauhetta",
+                        "¼ tl suolaa"
+                    ]
+                },
+                {
+                    "title": "Lisäksi:",
+                    "ingredients": [
+                        "Lettuhilloa",
+                        "Vaniljajäätelöä",
+                        "Paljon hyvää mieltä ☺☺☺"
+                    ]
+                }
+            ],
+            "instructions": "Sulata voi. Sekoita munien rakenne rikki kulhossa. Lisää maito. Yhdistä kuivat aineet keskenään ja lisää seos muna-maitoseokseen vähitellen vispilällä hyvin sekoittaen. Sekoita joukkoon voisula. Anna taikinan seistä puolisen tuntia viileässä.\\nPaista vohvelit vohveliraudalla öljyä tai voita apuna käyttäen. Tarjoile kermavaahdon, jäätelön tai esimerkiksi mansikka- tai puolukkahillon kera."
+        },
+        {
+            "name": "Mustikkapiirakka",
+            "imgPath": "mustikkapiirakka.jpg",
+            "imgAlt": "Kuva valmiista mustikkapiirakasta lautasella.",
+            "recipeParts": [
+                {
+                    "title": "Pohjataikina:",
+                    "ingredients": [
+                        "75 g voita",
+                        "¾ dl sokeria",
+                        "½ kananmuna",
+                        "1,5 dl vehnäjauhoja",
+                        "½ tl leivinjauhetta"
+                    ]
+                },
+                {
+                    "title": "Lisäksi:",
+                    "ingredients": [
+                        "200 g kotimaisia metsämustikoita"
+                    ]
+                },
+                {
+                    "title": "Murutaikina:",
+                    "ingredients": [
+                        "50 g voita",
+                        "½ dl sokeria",
+                        "1 dl vehnäjauhoja"
+                    ]
+                }
+            ],
+            "instructions": "Laita uuni lämpenemään 200 °C.\\nPohjataikina:\\nPehmitä voita hiukan mikrossa. Vatkaa sokeri ja voi vaahdoksi. Lisää muna ja kuiva-aineet ja sekoita tasaiseksi. Voitele vuoka ja levitä taikina pohjalle (tässä ohjeessa on käytetty n. 25x15 cm pyrex-vuokaa: tee annoksesta kaksinkertainen jos käytät isompaa vuokaa). Kaada mustikat vuokaan taikinan päälle tai sekoita taikinan joukkoon.\\nMurutaikina:\\nSekoita murutaikinan ainekset nyppimällä ja ripottele murutaikina vuokaan mustikoiden päälle. Paista uunin alatasolla noin 30 minuuttia."
+        },
+        {
+            "name": "Halloumisalaatti",
+            "imgPath": "halloumisalaatti.jpg",
+            "imgAlt": "Kuva valmiista halloumisalaatista lautasella.",
+            "recipeParts": [
+                {
+                    "title": "",
+                    "ingredients": [
+                        "200 g halloumia",
+                        "Hunajameloni",
+                        "Puoli pakettia vihreitä viinirypäleitä",
+                        "½ kurkku",
+                        "Jäävuorisalaattia"
+                    ]
+                }
+            ],
+            "instructions": "Leikkaa halloumi kuutioiksi ja paista pannulla molemmin puolin kellertäviksi. Anna jäähtyä. Pilko kasvikset ja sekoita kaikki ainekset keskenään tarjoilukulhossa."
+        }
+    ]
+}
